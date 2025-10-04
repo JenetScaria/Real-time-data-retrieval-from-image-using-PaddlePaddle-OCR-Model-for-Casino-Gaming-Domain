@@ -1,0 +1,8 @@
+paddlepaddle-gpu
+paddleocr
+opencv-python
+psycopg2-binary
+mlflow
+pyyaml
+numpy
+python-dotenv

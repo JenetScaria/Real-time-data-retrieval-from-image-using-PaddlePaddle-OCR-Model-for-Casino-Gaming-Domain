@@ -1,0 +1,25 @@
+model:
+  model_type: "PP-OCRv3"
+  det_model_dir: "./models/det"
+  rec_model_dir: "./models/rec"
+  cls_model_dir: "./models/cls"
+  use_gpu: true
+  gpu_mem: 8000
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "casino_prizes"
+  user: "admin"
+  password: "password"
+  table: "slot_machine_prizes"
+
+processing:
+  confidence_threshold: 0.8
+  max_retries: 3
+  processing_delay: 0.1
+  roi_coordinates: [100, 150, 400, 200]  # x1, y1, x2, y2
+
+mlflow:
+  tracking_uri: "http://localhost:5000"
+  experiment_name: "casino_ocr_training"
